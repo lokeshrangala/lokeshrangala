@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokesh Rangala | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#020617;
+  --bg2:#020b24;
+  --glass:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.12);
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --blue:#22d3ee;
+  --purple:#8b5cf6;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% 10%, #0b1c3d, transparent),
+    radial-gradient(1000px 500px at 90% 20%, #020b24, transparent),
+    linear-gradient(180deg,var(--bg1),var(--bg2));
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:48px 24px;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:80px;
+}
+.profile{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+.avatar{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  border:3px solid var(--blue);
+  object-fit:cover;
+}
+.name{
+  font-size:22px;
+  font-weight:700;
+}
+.subtitle{
+  font-size:14px;
+  color:var(--muted);
+}
+.nav a{
+  margin-left:14px;
+  padding:10px 18px;
+  border-radius:14px;
+  text-decoration:none;
+  color:white;
+  background:var(--glass);
+  border:1px solid var(--border);
+}
+.nav .resume{
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  border:none;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  margin-bottom:90px;
+}
+.hero h1{
+  font-size:48px;
+  color:#60a5fa;
+  margin-bottom:12px;
+}
+.hero p{
+  max-width:780px;
+  margin:auto;
+  font-size:18px;
+  color:var(--muted);
+}
+.chips{
+  margin-top:26px;
+}
+.chip{
+  display:inline-block;
+  margin:6px;
+  padding:8px 16px;
+  border-radius:999px;
+  background:var(--glass);
+  border:1px solid var(--border);
+  font-size:14px;
+}
+
+/* COMMON GRID */
+.section-title{
+  font-size:24px;
+  margin:80px 0 30px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:26px;
+}
+
+/* CARD */
+.card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;
+  backdrop-filter:blur(14px);
+  display:flex;
+  flex-direction:column;
+}
+
+/* IMAGE */
+.card-img{
+  width:100%;
+  height:180px;
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:16px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card h3{
+  margin:6px 0 8px;
+  font-size:18px;
+}
+.card p{
+  font-size:15px;
+  color:var(--muted);
+  flex-grow:1;
+}
+
+/* TAGS */
+.tags{
+  margin-top:14px;
+}
+.tag{
+  display:inline-block;
+  margin:4px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.08);
+  font-size:13px;
+}
+
+/* CONTACT */
+.contact{
+  margin-top:120px;
+  text-align:center;
+}
+.contact-box{
+  max-width:650px;
+  margin:40px auto;
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:26px;
+  padding:34px;
+}
+input,textarea{
+  width:100%;
+  margin-bottom:16px;
+  padding:14px 18px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(0,0,0,0.25);
+  color:white;
+  font-size:15px;
+}
+textarea{resize:none;height:120px}
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:600;
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  color:#020617;
+  cursor:pointer;
+}
+
+.footer{
+  margin-top:80px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+}
+
+@media(max-width:600px){
+  .hero h1{font-size:36px}
+  .header{flex-direction:column;gap:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="profile">
+    <img src="profile.jpg" class="avatar">
+    <div>
+      <div class="name">LOKESH RANGALA</div>
+      <div class="subtitle">Mechanical Engineer • CAE • CFD • EV Thermal Systems</div>
+    </div>
+  </div>
+  <div class="nav">
+    <a href="#projects">Projects</a>
+    <a href="#internships">Internships</a>
+    <a href="#contact">Contact</a>
+    <a class="resume" href="Lokesh_Rangala_Resume.pdf" target="_blank">Download Resume</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Hello! I'm Lokesh 👋</h1>
+  <p>
+    Mechanical Engineering undergraduate specializing in CFD analysis,
+    Battery Thermal Management Systems, and CAD-based design for Electric Vehicles.
+  </p>
+  <div class="chips">
+    <span class="chip">ANSYS Fluent</span>
+    <span class="chip">CFD</span>
+    <span class="chip">CATIA V5</span>
+    <span class="chip">Siemens NX</span>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<h2 class="section-title" id="projects">🚀 Projects</h2>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-img"><img src="btms.jpeg"></div>
+    <h3>Battery Thermal Management System (EVs)</h3>
+    <p>CFD analysis using nanofluids and TEC stages to optimize cooling efficiency and temperature uniformity.</p>
+    <div class="tags">
+      <span class="tag">ANSYS Fluent</span>
+      <span class="tag">CFD</span>
+      <span class="tag">EV</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img"><img src="jetengine.jpg"></div>
+    <h3>Jet Engine Assembly Design</h3>
+    <p>Designed and assembled propulsion components in CATIA V5 with focus on mechanical integration.</p>
+    <div class="tags">
+      <span class="tag">CATIA V5</span>
+      <span class="tag">CAD</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img"><img src="solar.jpg"></div>
+    <h3>Solar Drying vs Open Sun Drying</h3>
+    <p>Experimental study comparing drying efficiency, moisture reduction, and product quality.</p>
+    <div class="tags">
+      <span class="tag">Thermal</span>
+      <span class="tag">Renewable</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- INTERNSHIPS -->
+<h2 class="section-title" id="internships">🧑‍💻 Internships</h2>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-img"><img src="simulationlab.jpg"></div>
+    <h3>CAE Engineer Intern – Simulation Lab</h3>
+    <p>
+      Performed CFD simulations on EV Battery Thermal Management Systems using
+      nanofluids and designed a 7-TEC thermal network for uniform cooling.
+    </p>
+    <div class="tags">
+      <span class="tag">ANSYS Fluent</span>
+      <span class="tag">CFD</span>
+      <span class="tag">Thermal</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img"><img src="varunmotors.jpg"></div>
+    <h3>Industrial Trainee – Varun Motors Pvt. Ltd.</h3>
+    <p>
+      Six-month hands-on training in automobile servicing, engine diagnostics,
+      electrical systems, and workshop tools handling.
+    </p>
+    <div class="tags">
+      <span class="tag">Automobile</span>
+      <span class="tag">Maintenance</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="contact-box" id="contact">
+
+  <form action="https://formspree.io/f/mreboklk" method="POST">
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
+
+    <textarea
+      name="message"
+      placeholder="Your Message..."
+      required
+    ></textarea>
+
+    <!-- Optional hidden subject -->
+    <input type="hidden" name="_subject" value="New Portfolio Message">
+
+    <!-- Anti-spam (Formspree recommended) -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+  <p class="subtitle" style="margin-top:18px">
+    📩 Messages will be sent directly to my email
+  </p>
+
+  <p class="subtitle">
+    or mail me directly → <strong>lokeshrangala146@gmail.com</strong>
+  </p>
+</div>
+
+<div class="footer">
+  © 2026 Lokesh Rangala • Mechanical Engineering Portfolio
+</div>
+
+</div>
+</body>
+</html>
